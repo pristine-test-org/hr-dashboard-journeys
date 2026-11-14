@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>People · Pinecrest HR</title>
+<script>try { if (!localStorage.getItem('hrd.session')) location.replace('index.html?next=' + encodeURIComponent((location.pathname.split('/').pop() || 'people.html') + location.search)); } catch (e) { location.replace('index.html'); }</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="people">
+<div class="shell" id="shell">
+  <main class="main" id="main">
+    <div class="page-head">
+      <div>
+        <h1>People</h1>
+        <p><strong id="count">0</strong> people on the team</p>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-ghost" id="export">Export CSV</button>
+        <a class="btn btn-primary" href="add.html">Add person</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="toolbar">
+        <input id="search" class="search" type="search" placeholder="Search by name, title or department" aria-label="Search people">
+        <div class="legend" aria-label="Review status colours">
+          <span><i class="dot" style="background:#d93025"></i>Overdue</span>
+          <span><i class="dot" style="background:#1e9e57"></i>On track</span>
+          <span><i class="dot" style="background:#f2a900"></i>Pending</span>
+        </div>
+      </div>
+      <table class="table">
+        <thead>
+          <tr><th>Person</th><th class="col-dept">Department</th><th class="col-start">Start date</th><th>Review</th></tr>
+        </thead>
+        <tbody id="people-body"></tbody>
+      </table>
+    </div>
+    <p class="hint table-foot">Review colours update every Monday. Ask your HR admin if someone looks wrong.</p>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

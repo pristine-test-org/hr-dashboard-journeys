@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add person · Pinecrest HR</title>
+<script>try { if (!localStorage.getItem('hrd.session')) location.replace('index.html?next=' + encodeURIComponent((location.pathname.split('/').pop() || 'people.html') + location.search)); } catch (e) { location.replace('index.html'); }</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="add">
+<div class="shell" id="shell">
+  <main class="main" id="main">
+    <p><a href="people.html">← People</a></p>
+    <div class="page-head">
+      <div>
+        <h1 id="edit-heading">Add a new hire</h1>
+        <p>New face? Fill in the basics and add a photo.</p>
+      </div>
+    </div>
+    <form id="person-form" class="card" novalidate>
+      <div id="form-alert" class="form-alert" role="alert" hidden></div>
+      <div class="form-layout">
+        <div>
+          <div class="grid-2">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" autocomplete="off">
+              <span class="error" id="name-error"></span>
+            </div>
+            <div class="field">
+              <label for="email">Work email</label>
+              <input id="email" name="email" type="email" autocomplete="off">
+              <span class="error" id="email-error"></span>
+            </div>
+            <div class="field">
+              <label for="title">Job title</label>
+              <input id="title" name="title" type="text" autocomplete="off">
+              <span class="error" id="title-error"></span>
+            </div>
+            <div class="field">
+              <label for="department">Department</label>
+              <select id="department" name="department"></select>
+              <span class="error" id="department-error"></span>
+            </div>
+            <div class="field">
+              <label for="startDate">Start date</label>
+              <input id="startDate" name="startDate" type="date">
+              <span class="hint">Use the first day they’ll actually work, not the day they signed.</span>
+              <span class="error" id="startDate-error"></span>
+            </div>
+            <div class="field">
+              <label for="status">Review</label>
+              <select id="status" name="status">
+                <option value="pending">Pending</option>
+                <option value="ontrack">On track</option>
+                <option value="overdue">Overdue</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="photo-box">
+          <label style="font-weight:600;font-size:.9rem" for="photo-input">Profile photo</label>
+          <div class="photo-preview" id="photo-preview"><img alt="Photo preview" src=""></div>
+          <input id="photo-input" name="photo" type="file" accept="image/*">
+          <div class="dropzone" id="dropzone">Or drop a photo here</div>
+          <span class="photo-status" id="photo-status" aria-live="polite"></span>
+          <button type="button" class="btn btn-ghost" id="remove-photo" hidden>Remove photo</button>
+          <span class="hint">Square photos look best. We shrink big ones for you.</span>
+        </div>
+      </div>
+      <div class="btn-row" style="margin-top:8px">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a class="btn btn-ghost" id="cancel" href="people.html">Cancel</a>
+      </div>
+    </form>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

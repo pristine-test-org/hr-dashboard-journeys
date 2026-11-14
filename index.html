@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in · Pinecrest HR</title>
+<script>try { if (localStorage.getItem('hrd.session')) location.replace('people.html'); } catch (e) {}</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="signin">
+<main class="signin-wrap">
+  <div class="signin">
+    <div class="brand"><span class="brand-mark" style="color:#fff">P</span>Pinecrest HR</div>
+    <div class="card">
+      <h1>Welcome back</h1>
+      <p class="sub">Sign in to see your team.</p>
+      <div id="signin-error" class="form-alert" role="alert" hidden></div>
+      <form id="signin-form" method="post" action="#" novalidate>
+        <div class="field">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false">
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password">
+        </div>
+        <button class="btn btn-primary" type="submit" style="width:100%">Sign in</button>
+      </form>
+      <div class="logins">
+        <strong>Test logins</strong>
+        <ul>
+          <li><code>admin</code> / <code>demo-admin</code> (HR admin)</li>
+          <li><code>dana</code> / <code>demo-dana</code> (team manager)</li>
+        </ul>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:14px;text-align:center"><a href="#" id="reset-signin">Reset demo data</a></p>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

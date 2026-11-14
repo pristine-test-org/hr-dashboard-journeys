@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Profile · Pinecrest HR</title>
+<script>try { if (!localStorage.getItem('hrd.session')) location.replace('index.html?next=' + encodeURIComponent((location.pathname.split('/').pop() || 'people.html') + location.search)); } catch (e) { location.replace('index.html'); }</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="person">
+<div class="shell" id="shell">
+  <main class="main" id="main">
+    <p><a href="people.html">← People</a></p>
+    <div class="card">
+      <div class="profile-head">
+        <img id="p-photo" class="avatar avatar-lg" alt="Profile photo" src="">
+        <div style="flex:1;min-width:180px">
+          <h1 id="p-name"></h1>
+          <div class="sub" id="p-title"></div>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn btn-faint" id="welcome">Send welcome email</button>
+          <a class="btn btn-primary" id="edit-link" href="#">Edit profile</a>
+        </div>
+      </div>
+      <dl class="facts">
+        <dt>Email</dt><dd id="p-email"></dd>
+        <dt>Department</dt><dd id="p-dept"></dd>
+        <dt>Start date</dt><dd id="p-start"></dd>
+        <dt>Review</dt><dd><span class="pill" id="p-status"></span></dd>
+      </dl>
+    </div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

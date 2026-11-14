@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reports · Pinecrest HR</title>
+<script>try { if (!localStorage.getItem('hrd.session')) location.replace('index.html?next=' + encodeURIComponent((location.pathname.split('/').pop() || 'people.html') + location.search)); } catch (e) { location.replace('index.html'); }</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="reports">
+<div class="shell" id="shell">
+  <main class="main" id="main">
+    <div class="page-head">
+      <div>
+        <h1>Reports</h1>
+        <p>Headcount, start dates and reviews by department.</p>
+      </div>
+    </div>
+    <div class="card" id="report-box"></div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
