@@ -68,7 +68,7 @@ p { margin: 0 0 1rem; }
 .field.has-error input, .field.has-error select { border-color: var(--danger); }
 .error { color: var(--danger); font-size: .85rem; }
 .form-alert { background: #fdecea; color: #8a1c1c; border: 1px solid #f5c2bd; border-radius: 8px; padding: 10px 12px; margin-bottom: 14px; }
-.hint { font-size: 11px; color: #c8ccd3; } /* trap: tiny light-grey help text */
+.hint { font-size: 12px; color: #c8ccd3; } /* trap: tiny light-grey help text */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
 .form-layout { display: grid; grid-template-columns: 1fr 280px; gap: 20px; align-items: start; }
 
